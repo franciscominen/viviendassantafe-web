@@ -1,0 +1,97 @@
+@import "../App.scss";
+@keyframes iconMove {
+    0% {transform: translateX(0px);}
+    50% {transform: translateX(13px);}
+    100% {transform: translateX(0px);}
+}
+.video {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    @media (max-width: 768px) {
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.home_container {
+    width: 40em;
+    position: absolute;
+    bottom: 30%;
+    left: 6%;
+    @media (max-width: 768px) {
+        width: 100%;
+        left: 0;
+        padding: 20px;
+        bottom: 15%;
+    }
+
+    .llave-en-mano {    
+        position: relative;
+        display: inline-block;
+        background-color: $principalColor;
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding: 2px 5px;
+        border-radius: 4px;
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+    }   
+
+    .contacto-btn {
+        position: relative;
+        margin-top: 55px;
+        width: 18em;
+        display: inline-block;
+        z-index: 2;
+        padding: 7px 20px;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        border: 2px solid white;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .2s;
+        &:hover{
+            background: $principalColor;
+            transform: scale(1.03);
+        }
+        .icon {
+            font-size: 30px;
+            animation: 2s infinite iconMove;
+        }
+        @media (max-width: 768px) {
+            bottom: 25%;
+            font-size: 16px;
+            padding: 4px 15px;
+            width: 100%;
+        }
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 45em;
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+
+    h1 {
+        color: white;
+        font-size: 55px;
+        text-shadow: 2px 2px 2px #00000047;
+        span {
+            color: $secondaryColor;
+        }
+        @media (max-width: 768px) {
+            font-size: 40px;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@import "../App.scss";
+@keyframes iconMove {
+    0% {transform: translateX(0px);}
+    50% {transform: translateX(13px);}
+    100% {transform: translateX(0px);}
+}
+@keyframes iconMoveMbl {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(13px);}
+    100% {transform: translateY(0px);}
+}
+
+.aboutUs-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    bottom: 0%;
+
+    .icon-container {
+        position: absolute;
+        right: 5%;
+        cursor: pointer;
+        transition: .2s;
+        &:hover {
+            transform: scale(1.1);
+        }
+        @media (max-width: 768px) {
+            display: none;
+        }
+        .icon {
+            color: white;
+            font-size: 100px;
+            animation: 1.5s infinite iconMove;
+        }
+    }
+
+    .icon-container-mbl {
+        display: none;
+        @media (max-width: 768px) {
+            display: inline-block;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .icon {
+            font-size: 55px;
+            color: rgba(255, 255, 255, 0.781);
+            animation: 1.5s infinite iconMoveMbl;
+        }
+    }
+
+    .btns-container {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        @media (max-width: 768px) {
+            top: 18em;
+        }
+    }
+}
+

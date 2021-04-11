@@ -1,0 +1,73 @@
+@import "../App.scss";
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #009d3cc2;
+    padding: 25px 7px;
+    border-radius: 10px;
+    margin: 20px 0;
+    transition: .2s;
+    .icon {
+        font-size: 20px;
+    }
+    &:hover {
+        background-color: $secondaryColor;
+        transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+        padding: 8px 13px;
+        border-radius: 7px;
+        .icon {
+            font-size: 17px;
+        }
+    }
+}
+
+.wpp-btn-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    bottom: 3%;
+    right: 4%;
+    @media (max-width: 768px) {
+        bottom: 2%;
+        right: 45%;
+        position: fixed;
+    }
+    
+    &:hover span {
+        opacity: 1;
+    }
+    &:hover svg {
+        transform: translateY(-0.7em);
+    }
+
+    svg {
+        transition: ease-in-out .2s;
+        font-size: 40px;
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.164));
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
+    }
+
+    span {
+        color: white;
+        font-weight: 700;
+        opacity: 0;
+        transition: ease-in-out .2s;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.144);
+        position: relative;
+        bottom: 1em;
+        font-size: 18px;
+        @media (max-width: 768px){
+            display: none;
+        }
+    }
+
+}

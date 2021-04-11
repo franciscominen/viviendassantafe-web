@@ -1,0 +1,229 @@
+@import "../../App.scss";
+
+.contact-vid {
+    @media (max-width: 768px) {
+        height: 205vh;
+    } 
+}
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    bottom: 0%;
+    @media (max-width: 768px) {
+        top: 22.5em;
+        bottom: 0;
+    }
+
+    h1 {
+        color:  white;
+        font-size: 45px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.274);
+        width: 24.5em;
+        svg {
+            vertical-align: sub;
+        }
+        @media (max-width: 768px) {
+            width: auto;
+            font-size: 34px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        }
+    }
+
+    .components-container {
+        display: flex;
+        @media (max-width: 768px) {
+           flex-direction: column; 
+           justify-content: center;
+           align-items: center;
+        }
+    }
+}
+
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+    width: 45em;
+    padding: 35px;
+    background: #ffffffd6;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.205);
+    border-bottom: 7px solid $principalColor;
+    @media (max-width: 768px) {
+        width: 90%;
+        margin-bottom: 20px;
+        border-top: 4px solid $principalColor;
+        border-bottom: none;
+    }
+
+    .info-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        @media (max-width: 768px) {
+          flex-direction: column;  
+        }
+
+        article {
+            @media (max-width: 768px) {
+                margin-bottom: 20px;
+              }
+        }
+
+        h3 {
+            color: $principalColor;
+            font-size: 20px;
+            margin-bottom: 14px;
+            span {
+                border-bottom: 3px solid $secondaryColor;
+                border-radius: 0 0 2px 0;
+            }
+        }
+        p{
+            font-family: 'Montserrat', sans-serif;
+            color: $principalColor;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 15px;
+            font-weight: 500;
+            svg {
+                margin-right: 7px;
+                font-size: 22px;
+            }
+        }
+        a{
+            font-family: 'Montserrat', sans-serif;
+            color: $principalColor;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: .2s;
+            svg {
+                margin-right: 7px;
+                font-size: 22px;
+            } 
+            &:hover {
+                color: $secondaryColor;
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    .map-container{
+        h3 {
+            color: $principalColor;
+            font-size: 20px;
+            margin-bottom: 14px;
+            span {
+                border-bottom: 3px solid $secondaryColor;
+                border-radius: 0 0 2px 0;
+            }
+        }
+    }
+}
+
+.contactForm-container {
+    display: flex;
+    flex-direction: column;
+    background: #ffffffd6;
+    padding: 20px 40px;
+    border-radius: 10px;
+    margin-left: 20px;
+    width: 23em;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.205);
+    border-bottom: 7px solid $principalColor;
+    @media (max-width: 768px) {
+        width: 90%;
+        margin: 0;
+        margin-bottom: 30px;
+        border-bottom: none;
+        border-top: 4px solid $principalColor;
+    }
+    h2 {
+        color: $principalColor;
+        font-size: 20px;
+        margin-bottom: 15px;
+        span {
+            border-bottom: 3px solid $secondaryColor;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            color: $principalColor;
+            font-size: 15px;
+            font-weight: 600;
+            background: transparent;
+            border: 1px solid #92af9d94;
+            border-radius: 5px;
+            margin: 5px 0;
+            padding: 12px;
+            transition: .2s;
+            &::placeholder {
+                color: $principalColor;
+                font-size: 15px;
+                font-weight: 300;
+            }
+            &:focus {
+                outline: transparent;
+                border: 2px solid $secondaryColor;
+            }
+        }
+        textarea {
+            color: $principalColor;
+            font-size: 15px;
+            font-weight: 600;
+            background: transparent;
+            border: 1px solid #92af9d94;
+            border-radius: 5px;
+            margin: 5px 0;
+            padding: 12px;
+            height: 5.2em;
+            transition: ease-in .1s;
+            &::placeholder {
+                color: $principalColor;
+                font-size: 15px;
+                font-weight: 300;
+            }
+            &:focus {
+                outline: none;
+                border: 2px solid $secondaryColor;
+            }
+        }
+        button {
+            color: white;
+            background: $secondaryColor;
+            border: none;
+            font-size: 19px;
+            font-weight: 600;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                background: #20cc62;
+            }
+            svg {
+                margin-left: 10px;
+            }
+        }
+    }
+}
