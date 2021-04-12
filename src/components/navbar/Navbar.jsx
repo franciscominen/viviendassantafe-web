@@ -60,6 +60,7 @@ function Navbar() {
                 to='/nosotros'
                 className='nav-links'
                 onClick={closeMobileMenu}
+                activeClassName='navLink-active'
               >
                 <FaUsers className='nav-icon'/>  
                 Nosotros
@@ -70,6 +71,7 @@ function Navbar() {
                 to='/modelos'
                 className='nav-links'
                 onClick={closeMobileMenu}
+                activeClassName='navLink-active'
               >
                   <IoHome className='nav-icon'/>
                   Modelos
@@ -80,6 +82,7 @@ function Navbar() {
                 to='/galeria'
                 className='nav-links'
                 onClick={closeMobileMenu}
+                activeClassName='navLink-active'
               >   
                   <IoMdPhotos className='nav-icon'/>
                   Galeria
@@ -107,6 +110,7 @@ function Navbar() {
                 to='/contacto'
                 className='nav-links'
                 onClick={closeMobileMenu}
+                activeClassName='navLink-active'
               >
                   <MdContactPhone className='nav-icon'/>
                   Contacto
