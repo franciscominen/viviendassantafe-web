@@ -35,9 +35,7 @@
     bottom: 3%;
     right: 4%;
     @media (max-width: 768px) {
-        bottom: 2%;
-        right: 45%;
-        position: fixed;
+        display: none;
     }
     
     &:hover span {

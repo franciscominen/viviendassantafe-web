@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './navbar.scss';
 import { ChevronDownIcon } from '@chakra-ui/icons';
-import { CgClose, CgMenu } from "react-icons/cg";
-import {FaUsers} from "react-icons/fa";
-import {IoHome, IoConstructSharp} from "react-icons/io5"
-import {IoMdPhotos} from "react-icons/io"
-import {MdContactPhone} from "react-icons/md"
+import { RiPencilRuler2Line, RiContactsBook2Line } from "react-icons/ri";
+import {HiOutlinePhotograph, HiOutlineUserGroup} from "react-icons/hi";
+import {FiTool} from "react-icons/fi"
+import {AiOutlineHome} from "react-icons/ai"
 import {
     Menu,
     MenuButton,
@@ -43,14 +42,29 @@ function Navbar() {
         <nav>
 
           <NavLink to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <img src={"/assets/img/logoAzul.svg"} alt=""/>
+            <img src={"/assets/img/logo.png"} alt=""/>
           </NavLink>
 
-          <div className='menu-icon' onClick={handleClick}>
+          {/* <div className='menu-icon' onClick={handleClick}>
             { click ? <CgClose style={{color:'#003B71'}}/> : <CgMenu style={{color:'#003B71'}}/>}
-          </div>
+          </div> */}
 
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <ul className='nav-menu'>
+            <li
+              className='nav-item'
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            >
+              <NavLink
+                to='/'
+                className='nav-links'
+                onClick={closeMobileMenu}
+                activeClassName='navLink-active'
+              >
+                <AiOutlineHome className='nav-icon'/>  
+                <span>Nosotros</span> 
+              </NavLink>
+            </li>
             <li
               className='nav-item'
               onMouseEnter={onMouseEnter}
@@ -62,8 +76,8 @@ function Navbar() {
                 onClick={closeMobileMenu}
                 activeClassName='navLink-active'
               >
-                <FaUsers className='nav-icon'/>  
-                Nosotros
+                <HiOutlineUserGroup className='nav-icon'/>  
+                <span>Nosotros</span> 
               </NavLink>
             </li>
             <li className='nav-item'>
@@ -73,8 +87,8 @@ function Navbar() {
                 onClick={closeMobileMenu}
                 activeClassName='navLink-active'
               >
-                  <IoHome className='nav-icon'/>
-                  Modelos
+                  <RiPencilRuler2Line className='nav-icon'/>
+                  <span>Modelos</span> 
               </NavLink>
             </li>
             <li className='nav-item'>
@@ -84,15 +98,15 @@ function Navbar() {
                 onClick={closeMobileMenu}
                 activeClassName='navLink-active'
               >   
-                  <IoMdPhotos className='nav-icon'/>
-                  Galeria
+                  <HiOutlinePhotograph className='nav-icon'/>
+                  <span>Galeria</span> 
               </NavLink>
             </li>
             <li className='nav-item'>
               <Menu>
                 <MenuButton className='nav-dropdown' rightIcon={<ChevronDownIcon style={{color:'white'}}/>}>
-                    <IoConstructSharp className='nav-icon'/>
-                    Servicios
+                    <FiTool className='nav-icon'/>
+                    <span>Servicios</span> 
                 </MenuButton>
                 <MenuList className='nav-dropdown-list'>
                     <MenuItem>Etapas de construccion</MenuItem>
@@ -105,15 +119,15 @@ function Navbar() {
                 </MenuList>
               </Menu>
             </li>
-            <li className='nav-item'>
+            <li className='nav-item' style={{border:'none'}}>
               <NavLink
                 to='/contacto'
                 className='nav-links'
                 onClick={closeMobileMenu}
                 activeClassName='navLink-active'
               >
-                  <MdContactPhone className='nav-icon'/>
-                  Contacto
+                  <RiContactsBook2Line className='nav-icon'/>
+                  <span>Contacto</span> 
               </NavLink>
             </li>
             

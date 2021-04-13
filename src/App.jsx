@@ -10,6 +10,7 @@ import AboutUsContainer from "./containers/AboutUsContainer";
 import VideoBg from "./layout/VideoBg";
 import DedicamosComponent from "./components/about/DedicamosComponent"
 import BeneficiosComponent from "./components/about/BeneficiosComponent";
+import TopBar from "./components/navbar/TopBar";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Router>
 
         <Navbar />
+        <TopBar/>
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/nosotros' component={AboutUsContainer} />
