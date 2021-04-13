@@ -6,13 +6,24 @@
     filter: opacity(0.5);
 }
 .galley-container {
-    margin: auto;
+    position: relative;
+    height: auto;
+    padding: 90px 0 0 0;
 }
 
+.galery-components{
+    background-color: rgba(255, 255, 255, 0.63);
+    padding: 30px 5px;
+    width: 95%;
+    margin: 0 auto;
+    border-radius: 14px;
+    border-bottom: 5px solid $principalColor;
+}
 .image-gallery {
     top: 6.5em;
     @media (max-width: 768px) {
-        top: 10em;
+        position: relative;
+        top: 0;
     }
 }
 .image-gallery-image {
@@ -64,6 +75,7 @@
 
     @media (max-width: 768px) {
         width: 95%;
-        top: 3em;
+        top: 0;
+        margin-bottom: 14px;
     }
 }

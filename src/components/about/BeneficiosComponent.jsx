@@ -13,7 +13,7 @@ const BeneficiosComponent = () => {
     return (
         <FadeIn duration={800}>
 
-        <video autoPlay="autoplay" loop="loop" muted className="video">
+        <video autoPlay="autoplay" loop="loop" muted className="video" playsinline="playsinline">
             <source src={videoSource}/>
         </video> 
 

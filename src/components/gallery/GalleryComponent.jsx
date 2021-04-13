@@ -1,7 +1,6 @@
 import React from 'react';
 import "./styles.scss";
 import ImageGallery from 'react-image-gallery';
-import {HiOutlinePhotograph} from "react-icons/hi"
 
 const images = [
   {
@@ -92,10 +91,9 @@ const images = [
 
 const GalleryComponent = () => {
   return (
-    <div>
-        <h1 className='gallery-title'>Galeria de fotos <HiOutlinePhotograph/></h1>
-        <ImageGallery items={images} />;
-    </div>
+    <>
+      <ImageGallery items={images} />
+    </>
   )
 }
 

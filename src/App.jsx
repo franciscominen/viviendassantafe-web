@@ -21,12 +21,12 @@ function App() {
         <TopBar/>
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/nosotros' component={AboutUsContainer} />
+          <Route path='/nosotros' exact component={AboutUsContainer} />
           <Route path='/aquenosdedicamos' component={DedicamosComponent} />
-          <Route path='/beneficios' component={BeneficiosComponent} />
-          <Route path='/contacto' component={ContactUsComponent} />
-          <Route path='/modelos' component={ModelsComponent} />
-          <Route path='/galeria' component={GalleryContainer} />
+          <Route path='/beneficios' exact component={BeneficiosComponent} />
+          <Route path='/contacto' exact component={ContactUsComponent} />
+          <Route path='/modelos' exact component={ModelsComponent} />
+          <Route path='/galeria' exact component={GalleryContainer} />
         </Switch>
         
       </Router>

@@ -10,14 +10,16 @@ const ModelsComponent = () => {
     return (
         <>
         <FadeIn duration={800}>
-            <video autoPlay="autoplay" loop="loop" muted className="video modelos-vid" style={{position:'absolute', top:'0'}}>
+            <video autoPlay="autoplay" loop="loop" muted className="video modelos-vid" style={{position:'absolute', top:'0'}} playsinline="playsinline">
                 <source src={videoSource}/>
             </video>
 
-            <h1 className='modelos-title'>Nuestros Modelos <RiPencilRuler2Line/></h1>
+            <section className='modelos-container'>
+                <h1 className='modelos-title'>Nuestros Modelos <RiPencilRuler2Line/></h1>
 
-            <TabsModels/>
-
+                <TabsModels/>
+            </section>
+            
             <WspBtn/>
             
         </FadeIn>

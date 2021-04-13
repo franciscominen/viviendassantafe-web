@@ -8,7 +8,8 @@
     height: 100vh;
     width: 100%;
     object-fit: cover;
-    display: flex;
+    position: fixed;
+    z-index: -1;
     @media (max-width: 768px) {
         height: 100vh;
         width: 100%;
@@ -24,7 +25,7 @@
         width: 100%;
         left: 0;
         padding: 20px;
-        bottom: 15%;
+        bottom: 28%;
     }
 
     .llave-en-mano {    
@@ -80,7 +81,7 @@
     position: relative;
     width: 45em;
     @media (max-width: 768px) {
-        width: 90%;
+        width: 100%;
     }
 
     h1 {

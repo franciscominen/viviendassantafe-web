@@ -5,7 +5,6 @@ header {
   justify-content: center;
 }
 
-
   nav {
     background: white;
     position: fixed;
@@ -54,6 +53,12 @@ header {
     align-items: center;
     font-weight: 500;
     font-size: 17px;
+  } 
+  .nav-item-inicio{
+    display: none;
+    @media screen and (max-width: 960px) {
+      display: flex;
+    }
   }
   .nav-icon {
     font-size: 23px;
@@ -124,27 +129,26 @@ header {
     }
     .nav-item {
       width: 100%;
-      border-right: 1px solid rgba(128, 128, 128, 0.301);
       justify-content: center;
     }
   
     .nav-menu {
       display: flex;
       justify-content: space-between;
-      width: 100%;
-      padding: 0 15px;
+      width: 97%;
       position: absolute;
     }
     .nav-links {
       display: flex;
-      flex-direction: row-reverse;
-      padding: 0 5px;
+      flex-direction: column;
       font-weight: 600;
+      padding: 0;
       span {
-        display: none;
+        font-size: 10px;
+        font-weight: 700;
       }
       svg {
-        font-size: 28px;
+        font-size: 26px;
       }
     }
   

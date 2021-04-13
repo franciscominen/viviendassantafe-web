@@ -10,8 +10,9 @@
     bottom: 0%;
     @media (max-width: 768px) {
         flex-direction: column;
-        top: 2em;
+        padding: 70px 0;
         height: auto;
+        position: relative;
     }
 
     .acc-container {

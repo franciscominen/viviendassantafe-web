@@ -51,20 +51,21 @@ function Navbar() {
 
           <ul className='nav-menu'>
             <li
-              className='nav-item'
+              className='nav-item nav-item-inicio'
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
             >
               <NavLink
                 to='/'
-                className='nav-links'
+                className='nav-links '
                 onClick={closeMobileMenu}
                 activeClassName='navLink-active'
               >
-                <AiOutlineHome className='nav-icon'/>  
-                <span>Nosotros</span> 
+                <AiOutlineHome className='nav-icon'/>   
+                <span>Inicio</span>
               </NavLink>
             </li>
+            
             <li
               className='nav-item'
               onMouseEnter={onMouseEnter}
@@ -102,7 +103,7 @@ function Navbar() {
                   <span>Galeria</span> 
               </NavLink>
             </li>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Menu>
                 <MenuButton className='nav-dropdown' rightIcon={<ChevronDownIcon style={{color:'white'}}/>}>
                     <FiTool className='nav-icon'/>
@@ -118,7 +119,7 @@ function Navbar() {
                     <MenuItem>Cotiza tu hogar</MenuItem>
                 </MenuList>
               </Menu>
-            </li>
+            </li> */}
             <li className='nav-item' style={{border:'none'}}>
               <NavLink
                 to='/contacto'

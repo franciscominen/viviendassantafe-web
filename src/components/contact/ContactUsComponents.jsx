@@ -15,7 +15,7 @@ const ContactUsComponents = () => {
     return (
         <ScaleFade initialScale={0.7} in={true}> 
 
-        <video autoPlay="autoplay" loop="loop" muted className="video contact-vid" style={{position:'absolute', top:'0'}}>
+        <video autoPlay="autoplay" loop="loop" muted className="video contact-vid" style={{position:'absolute', top:'0'}} playsinline="playsinline">
             <source src={videoSource}/>
         </video>
 

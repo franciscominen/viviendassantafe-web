@@ -14,7 +14,7 @@ const DedicamosComponent = () => {
         <>  
         <FadeIn duration={800}>
 
-            <video autoPlay="autoplay" loop="loop" muted className="video video-dedicamos">
+            <video autoPlay="autoplay" loop="loop" muted className="video video-dedicamos" playsinline="playsinline">
                 <source src={videoSource}/>
             </video> 
 

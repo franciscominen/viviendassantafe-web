@@ -15,8 +15,9 @@
     position: absolute;
     bottom: 0%;
     @media (max-width: 768px) {
-        top: 22.5em;
-        bottom: 0;
+        position: relative;
+        height: auto;
+        padding: 70px 0;
     }
 
     h1 {
@@ -32,7 +33,7 @@
             width: auto;
             font-size: 34px;
             margin-bottom: 10px;
-            margin-top: 30px;
+            
         }
     }
 

@@ -13,7 +13,7 @@ const AboutUsContainer = () => {
         <>
         <ScaleFade initialScale={0.7} in={true}>
             
-        <video autoPlay="autoplay" loop="loop" muted className="video">
+        <video autoPlay="autoplay" loop="loop" muted className="video" playsinline="playsinline">
             <source src={videoSource}/>
         </video> 
 
