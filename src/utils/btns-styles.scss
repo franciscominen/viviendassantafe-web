@@ -1,4 +1,10 @@
 @import "../App.scss";
+@import "../App.scss";
+@keyframes loading {
+    0% {}
+    50% {transform: scale(1.1);}
+    100% {}
+}
 
 .btn-container {
     display: flex;
@@ -68,4 +74,24 @@
         }
     }
 
+}
+
+.loader-container {
+    animation: loading 2s ease-in 0s infinite;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    width: 16em;
+    margin: auto;
+    top: 15em;
+    img {
+        max-width: 180px;
+        margin: auto;
+    }
+    h1 {
+        color: $principalColor;
+        margin-top: 10px;
+        font-size: 19px;
+    }
 }

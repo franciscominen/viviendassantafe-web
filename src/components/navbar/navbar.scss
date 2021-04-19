@@ -94,17 +94,19 @@ header {
     }
   }
   .nav-dropdown-list{
-    background: #003b719e;
+    background: rgba(255, 255, 255, 0.911);
     border-radius: 5px;
     .divider {
       width: 90%;
-      margin: auto;
+      margin: 0 auto;
+      opacity: 0.3;
     }
     .chakra-menu__menuitem {
       background: none;
       border: none;
-      color: white;
-      font-size: 18px;
+      color: $principalColor;
+      font-size: 15px;
+      font-weight: 600;
       padding: 20px;
       cursor: pointer;
       transition: .2s;
@@ -151,7 +153,11 @@ header {
         font-size: 26px;
       }
     }
-  
+    .drop {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
     .nav-dropdown{
       color: $principalColor;
       padding: 0 5px;
@@ -199,10 +205,6 @@ header {
           color: $secondaryColor;
         }
       }
-    }
-  
-    button {
-      display: none;
     }
   }
   

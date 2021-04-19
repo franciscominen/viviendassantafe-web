@@ -3,6 +3,7 @@ import firebase from 'firebase/app';
 import { getFirestore } from "../../firebaseConfig";
 import {AiOutlineSend} from "react-icons/ai";
 import {FaCheckCircle} from "react-icons/fa";
+import FadeIn from "../../utils/FadeIn";
 
 const ContactForm = () => {
     const [nombreCompleto, setNombreCompleto] = useState('');
@@ -43,13 +44,17 @@ const ContactForm = () => {
     }
 
     return (
-        <section className='contactForm-container'>
+        
+            <section className='contactForm-container'>
+            <FadeIn duration={800}>
             {consultaId ? 
+            <FadeIn duration={800}>
             <div className='consulta-realizada'>
                 <FaCheckCircle/>
                 <h2>Su consulta ha sido enviada</h2>
-                <p>Su consulta fue enviada con exito, nos contactaremos con usted dentro de las proximas 24hs.</p>
+                <p>Su consulta fue enviada con éxito, nos contactaremos con usted dentro de las próximas 24hs.</p>
             </div>
+            </FadeIn>
             :
             <div className='form-container'>
                 <h2>Dejanos tu cons<span>ulta</span></h2>
@@ -66,7 +71,7 @@ const ContactForm = () => {
                     />
                     <input 
                         type="text" 
-                        placeholder="Direccion de Email*"
+                        placeholder="Dirección de Email*"
                         required
                         id="email" 
                         name="email" 
@@ -75,7 +80,7 @@ const ContactForm = () => {
                     />
                     <input 
                         type="text" 
-                        placeholder="Telefono"
+                        placeholder="Teléfono"
                         required
                         id="telefono" 
                         name="telefono" 
@@ -110,6 +115,7 @@ const ContactForm = () => {
                 </form>
             </div>
         }
+        </FadeIn>
         </section >
     )
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import "./styles.scss"
 
 const VideoBg = () => {
-    const videoSource = "https://player.vimeo.com/external/534088880.sd.mp4?s=73bc0abfe365fd2cff4365c94123fd4df2eab4e7&profile_id=164&oauth2_token_id=57447761"
+    const videoSource = "https://cdn.pixabay.com/video/2021/04/19/71590.mp4"
     return (
         <video autoPlay="autoplay" loop="loop" muted className="video" playsinline="playsinline">
             <source src={videoSource}/>

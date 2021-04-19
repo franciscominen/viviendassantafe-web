@@ -8,7 +8,7 @@ const TopBar = () => {
         <div className='topbar-container'>
             <Link to={'/'}><img src={"/assets/img/logoBlanco.svg"} alt=""/></Link>
             <ul>
-                <li><a href="" target="_blank"><FaWhatsapp/></a></li>
+                <li><a href="https://wa.me/5493425525362" target="_blank"><FaWhatsapp/></a></li>
                 <li><a href="https://www.instagram.com/viviendassantafe/" target="_blank"><AiOutlineInstagram/></a></li>
                 <li><a href="https://www.facebook.com/VIVIENDASSANTAFE.S.R.L" target="_blank"><AiOutlineFacebook/></a></li>
             </ul>

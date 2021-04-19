@@ -15,7 +15,7 @@
     align-items: flex-end;
     margin: auto;
     position: absolute;
-    background: #ffffffb0;
+    background: #ffffffdc;
     padding: 70px 50px;
     border-radius: 15px;
     border-bottom: 8px solid $principalColor;
@@ -92,7 +92,7 @@
     }
     
     .descrip-container {
-        background-color: #ffffffc7;
+        background-color: #ffffffdc;
         border-radius: 10px;
         padding: 40px 55px;
         margin-right: 10px;
@@ -188,6 +188,11 @@
         position: absolute;
         top: 20.5em;
         left: 8em;
+        @media (max-width: 768px) {
+            position: relative;
+            margin: auto;
+            top: -3em;
+        }
     .dot {
             width: 10px;
             height: 10px;

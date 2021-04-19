@@ -2,9 +2,6 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 @import "../../App.scss";
 
-.gallery-vid {
-    filter: opacity(0.5);
-}
 .galley-container {
     position: relative;
     height: auto;
@@ -13,29 +10,39 @@
 
 .galery-components{
     background-color: rgba(255, 255, 255, 0.63);
-    padding: 30px 5px;
-    width: 95%;
+    padding: 0px 15px 10px 15px;
+    width: 90%;
     margin: 0 auto;
+    margin-bottom: 30px;
     border-radius: 14px;
-    border-bottom: 5px solid $principalColor;
+    @media (max-width: 768px) {
+        width: 99%;
+        padding: 0;
+    }
 }
 .image-gallery {
-    top: 6.5em;
     @media (max-width: 768px) {
         position: relative;
         top: 0;
     }
 }
+.image-gallery-content.fullscreen {
+    background: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .image-gallery-image {
-    height: 70vh;
+    height: 85vh;
     @media (max-width: 768px) {
         height: auto;
     }
 }
 
 .image-gallery-slide-wrapper {
-    width: 80%;
-    margin: auto;
+    width: 95%;
+    margin: 0 auto;
     @media (max-width: 768px) {
         width: 95%;
     }
@@ -45,9 +52,22 @@
     color: $principalColor;
     filter: none;
     transition: .2s;
-    
     &:hover {
         color: $secondaryColor;
+    }
+    @media (max-width: 768px) {
+        display: flex;
+        color: white;  
+    }
+}
+.image-gallery-left-nav {
+    @media (max-width: 768px) {
+        padding: 2px;
+    }
+}
+.image-gallery-right-nav {
+    @media (max-width: 768px) {
+        padding: 2px;
     }
 }
 
@@ -61,11 +81,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 2.5em;
     position: relative;
     font-size: 35px;
     width: 75%;
     margin: auto;
+    margin-bottom: 20px;
     text-align: center;
     color: $principalColor;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.116);
@@ -77,5 +97,6 @@
         width: 95%;
         top: 0;
         margin-bottom: 14px;
+        font-size: 30px;
     }
 }

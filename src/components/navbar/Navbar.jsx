@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './navbar.scss';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { RiPencilRuler2Line, RiContactsBook2Line } from "react-icons/ri";
@@ -52,14 +52,10 @@ function Navbar() {
           <ul className='nav-menu'>
             <li
               className='nav-item nav-item-inicio'
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
             >
               <NavLink
                 to='/'
                 className='nav-links '
-                onClick={closeMobileMenu}
-                activeClassName='navLink-active'
               >
                 <AiOutlineHome className='nav-icon'/>   
                 <span>Inicio</span>
@@ -68,13 +64,10 @@ function Navbar() {
             
             <li
               className='nav-item'
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
             >
               <NavLink
                 to='/nosotros'
                 className='nav-links'
-                onClick={closeMobileMenu}
                 activeClassName='navLink-active'
               >
                 <HiOutlineUserGroup className='nav-icon'/>  
@@ -85,7 +78,6 @@ function Navbar() {
               <NavLink
                 to='/modelos'
                 className='nav-links'
-                onClick={closeMobileMenu}
                 activeClassName='navLink-active'
               >
                   <RiPencilRuler2Line className='nav-icon'/>
@@ -96,35 +88,33 @@ function Navbar() {
               <NavLink
                 to='/galeria'
                 className='nav-links'
-                onClick={closeMobileMenu}
                 activeClassName='navLink-active'
               >   
                   <HiOutlinePhotograph className='nav-icon'/>
-                  <span>Galeria</span> 
+                  <span>Galería</span> 
               </NavLink>
             </li>
-            {/* <li className='nav-item'>
+            <li className='nav-item drop'>
               <Menu>
                 <MenuButton className='nav-dropdown' rightIcon={<ChevronDownIcon style={{color:'white'}}/>}>
                     <FiTool className='nav-icon'/>
                     <span>Servicios</span> 
                 </MenuButton>
                 <MenuList className='nav-dropdown-list'>
-                    <MenuItem>Etapas de construccion</MenuItem>
+                    <Link to={'/proximamente'}><MenuItem>Etapas de construcción </MenuItem></Link>
                     <hr className='divider'/>
-                    <MenuItem>Wood Frame</MenuItem>
+                    <Link to={'/proximamente'}><MenuItem>Wood Frame</MenuItem></Link>
                     <hr className='divider'/>
-                    <MenuItem>Steel Frame</MenuItem>
+                    <Link to={'/proximamente'}><MenuItem>Steel Frame</MenuItem></Link>
                     <hr className='divider'/>
-                    <MenuItem>Cotiza tu hogar</MenuItem>
+                    <Link to={'/proximamente'}><MenuItem>Cotizá tu hogar</MenuItem></Link>
                 </MenuList>
               </Menu>
-            </li> */}
+            </li>
             <li className='nav-item' style={{border:'none'}}>
               <NavLink
                 to='/contacto'
                 className='nav-links'
-                onClick={closeMobileMenu}
                 activeClassName='navLink-active'
               >
                   <RiContactsBook2Line className='nav-icon'/>

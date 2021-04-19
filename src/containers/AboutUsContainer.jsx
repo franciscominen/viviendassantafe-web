@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import AboutUsComponent from '../components/about/AboutUsComponent';
 import {Link} from "react-router-dom";
 import "./styles.scss";
@@ -6,35 +6,50 @@ import { ScaleFade } from "@chakra-ui/react";
 import PrevBtn from '../utils/PrevBtn';
 import NextBtn from '../utils/NextBtn';
 import WspBtn from '../utils/WspBtn';
+import LoaderComponent from '../utils/LoaderComponent';
 
 const AboutUsContainer = () => {
     const videoSource = "https://storage.coverr.co/videos/AkFALNeJmTP9IsipxgEDuFXwaQPZlW00H?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjE3OTg3MjQwfQ.yGlSnszJRNLLXrlPW8In5FGttZFGubFRtyHe4G9P5kQ"
+    
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        setLoading(true)
+        setTimeout(() => {
+        setLoading(false)
+        }, 1000)
+    }, [])
+    
     return (
         <>
-        <ScaleFade initialScale={0.7} in={true}>
-            
-        <video autoPlay="autoplay" loop="loop" muted className="video" playsinline="playsinline">
-            <source src={videoSource}/>
-        </video> 
+        { loading ?
+            <LoaderComponent/> :
+            <ScaleFade initialScale={0.7} in={true}>
+                
+            <video autoPlay="autoplay" loop="loop" muted className="video" playsinline="playsinline">
+                <source src={videoSource}/>
+            </video> 
 
-        <section className='aboutUs-section'>
+            <section className='aboutUs-section'>
 
-            <AboutUsComponent/>
+                <AboutUsComponent/>
 
-            <div className='btns-container'>
-                <Link to={"/beneficios"}>
-                    <PrevBtn/>
-                </Link>
-                <Link to={"/aquenosdedicamos"}>
-                    <NextBtn/>
-                </Link>
-            </div>
+                <div className='btns-container'>
+                    <Link to={"/beneficios"}>
+                        <PrevBtn/>
+                    </Link>
+                    <Link to={"/aquenosdedicamos"}>
+                        <NextBtn/>
+                    </Link>
+                </div>
 
-        </section>
+            </section>
 
-        <WspBtn/>
+            <WspBtn/>
 
-        </ScaleFade>
+            </ScaleFade>
+
+        }
         </>
     )
 }

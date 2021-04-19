@@ -2,7 +2,7 @@
 
 .contact-vid {
     @media (max-width: 768px) {
-        height: 205vh;
+        height: 215vh;
     } 
 }
 .contact-container {
@@ -52,7 +52,7 @@
     flex-direction: column;
     width: 45em;
     padding: 35px;
-    background: #ffffffd6;
+    background: rgba(255, 255, 255, 0.918);
     border-radius: 10px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.205);
     border-bottom: 7px solid $principalColor;
@@ -137,7 +137,7 @@
 .contactForm-container {
     display: flex;
     flex-direction: column;
-    background: #ffffffd6;
+    background: rgba(255, 255, 255, 0.918);
     padding: 20px 40px;
     border-radius: 10px;
     margin-left: 20px;
@@ -177,7 +177,8 @@
             &::placeholder {
                 color: $principalColor;
                 font-size: 15px;
-                font-weight: 300;
+                font-weight: 600;
+                opacity: 0.6;
             }
             &:focus {
                 outline: transparent;
@@ -198,7 +199,8 @@
             &::placeholder {
                 color: $principalColor;
                 font-size: 15px;
-                font-weight: 300;
+                font-weight: 600;
+                opacity: 0.6;
             }
             &:focus {
                 outline: none;
@@ -236,7 +238,11 @@
     justify-content: center;
     align-items: center;
     padding-top: 50px;
-
+    text-align: center;
+    @media (max-width: 768px) {
+        justify-content: flex-start;
+        height: 20em;
+    }
     svg {
         color: $secondaryColor;
         font-size: 75px;
@@ -244,6 +250,9 @@
     h2 {
         color: $secondaryColor;
         padding-top: 20px;
+        @media (max-width: 768px)  {
+            font-size: 18px;
+        }
     }
 
     p { 
@@ -251,5 +260,8 @@
         font-size: 16px;
         font-weight: 600;
         text-align: center;
+        @media (max-width: 768px) {
+            font-size: 15px;
+        }
     }
 }
