@@ -21,10 +21,11 @@ const DedicamosComponent = () => {
             <section className='aquenos-container'>
 
                 <div className='descrip-container'>
-                    <h1>A que nos dedica<span>mos?</span></h1>
-                    <p>Nos dedicamos al diseño, la planificación, la construcción y la venta de viviendas de industrialización mixta, implementando procesos de construcción tradicionales, como la construcción húmeda, y modernos, como la construcción en seco, los cuales empiezan a desarrollarse en nuestra propia fábrica.
-                        <br/>
-                        Disponemos de nuestros propios modelos de hogares, pero también nos adaptamos a cualquier cambio o exigencia del cliente. </p>
+                    <h1>¿A qué nos dedica<span>mos?</span></h1>
+                    <p>
+                        Nos dedicamos al diseño, planificación, construcción y venta de <span style={{color:'green'}}>viviendas de industrialización mixta</span>, implementando procesos de construcción tradicionales -como la construcción húmeda- y modernos -como la construcción en seco- los cuales comienzan a desarrollarse en nuestra propia fábrica. <br/>
+                        Disponemos de modelos estándares de hogares pero también, nos adaptamos a tu necesidad y gustos, ofreciendo así una <span style={{color:'green'}}>construcción flexible</span>.
+                    </p>
                 </div>
 
                 <div className='carousel-cards'>

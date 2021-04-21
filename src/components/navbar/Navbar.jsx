@@ -65,14 +65,21 @@ function Navbar() {
             <li
               className='nav-item'
             >
-              <NavLink
-                to='/nosotros'
-                className='nav-links'
-                activeClassName='navLink-active'
-              >
-                <HiOutlineUserGroup className='nav-icon'/>  
-                <span>Nosotros</span> 
-              </NavLink>
+              <Menu>
+                <MenuButton className='nav-dropdown' rightIcon={<ChevronDownIcon style={{color:'white'}}/>}>
+                    <HiOutlineUserGroup className='nav-icon'/>
+                    <span>Nosotros</span> 
+                </MenuButton>
+                <MenuList className='nav-dropdown-list'>
+                    <Link to={'/nosotros'}><MenuItem>¿Quiénes somos?</MenuItem></Link>
+                    <hr className='divider'/>
+                    <Link to={'/aquenosdedicamos'}><MenuItem>¿A qué nos dedicamos?</MenuItem></Link>
+                    <hr className='divider'/>
+                    <Link to={'/beneficios'}><MenuItem>Nuestros beneficios </MenuItem></Link>
+                    <hr className='divider'/>
+                    <Link to={'/proximamente'}><MenuItem>Preguntas frecuentes</MenuItem></Link>
+                </MenuList>
+              </Menu>
             </li>
             <li className='nav-item'>
               <NavLink
@@ -94,7 +101,7 @@ function Navbar() {
                   <span>Galería</span> 
               </NavLink>
             </li>
-            <li className='nav-item drop'>
+            {/* <li className='nav-item drop'>
               <Menu>
                 <MenuButton className='nav-dropdown' rightIcon={<ChevronDownIcon style={{color:'white'}}/>}>
                     <FiTool className='nav-icon'/>
@@ -110,7 +117,7 @@ function Navbar() {
                     <Link to={'/proximamente'}><MenuItem>Cotizá tu hogar</MenuItem></Link>
                 </MenuList>
               </Menu>
-            </li>
+            </li> */}
             <li className='nav-item' style={{border:'none'}}>
               <NavLink
                 to='/contacto'
