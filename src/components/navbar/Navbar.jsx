@@ -77,7 +77,7 @@ function Navbar() {
                     <hr className='divider'/>
                     <Link to={'/beneficios'}><MenuItem>Nuestros beneficios </MenuItem></Link>
                     <hr className='divider'/>
-                    <Link to={'/proximamente'}><MenuItem>Preguntas frecuentes</MenuItem></Link>
+                    <Link to={'/faq'}><MenuItem>Preguntas frecuentes</MenuItem></Link>
                 </MenuList>
               </Menu>
             </li>

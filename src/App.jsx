@@ -11,7 +11,7 @@ import DedicamosComponent from "./components/about/DedicamosComponent"
 import BeneficiosComponent from "./components/about/BeneficiosComponent";
 import TopBar from "./components/navbar/TopBar";
 import LoaderComponent from "./utils/LoaderComponent";
-import ProximamenteComponent from "./utils/ProximamenteComponent";
+import FaqComponent from "./components/FaqComponent/FaqComponent";
 
 function App() {
 
@@ -41,7 +41,7 @@ function App() {
             <Route path='/contacto' exact component={ContactUsComponent} />
             <Route path='/modelos' exact component={ModelsComponent} />
             <Route path='/galeria' exact component={GalleryContainer} />
-            <Route path='/proximamente' exact component={ProximamenteComponent} />
+            <Route path='/faq' exact component={FaqComponent} />
           </Switch>
         
         </Router> 
